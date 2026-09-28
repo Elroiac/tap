@@ -20,14 +20,14 @@ html,body{background:var(--ground)}
 body{margin:0;color:var(--ink);font-family:"Geist",-apple-system,"Segoe UI",Helvetica,Arial,sans-serif;font-size:16px;line-height:1.5;-webkit-font-smoothing:antialiased;overflow-x:hidden}
 #bg{position:fixed;inset:0;width:100%;height:100%;display:block;z-index:0}
 .vignette{position:fixed;inset:0;pointer-events:none;z-index:1;background:radial-gradient(circle at 50% 38%,transparent 22%,rgba(0,4,10,.18) 58%,rgba(0,2,6,.86) 100%)}
-.wrap{position:relative;z-index:2;max-width:460px;margin:0 auto;padding-inline:18px;padding-block:44vh 40px;display:flex;flex-direction:column;gap:18px}
-@media (min-height:900px){.wrap{padding-top:40vh}}
-header{display:flex;flex-direction:column;gap:12px;padding-inline:2px}
+.wrap{position:relative;z-index:2;max-width:460px;margin:0 auto;padding-inline:18px;padding-block:22vh 40px;display:flex;flex-direction:column;gap:18px}
+@media (min-height:900px){.wrap{padding-top:26vh}}
+header{display:flex;flex-direction:column;gap:10px;padding-inline:2px}
 .kicker{align-self:flex-start;display:inline-flex;align-items:center;gap:8px;padding:9px 14px;border:1px solid var(--blue);border-radius:999px;font-size:12.5px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;background:rgba(1,4,10,.35);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
 .kicker i{width:9px;height:9px;border-radius:50%;background:var(--blue);box-shadow:0 0 10px var(--blue)}
-h1{margin:0;font-weight:600;font-size:clamp(38px,10.5vw,50px);line-height:.98;letter-spacing:-.035em;text-wrap:balance;text-shadow:0 2px 24px rgba(0,0,0,.55)}
+h1{margin:0;font-weight:600;font-size:clamp(32px,9vw,46px);line-height:.98;letter-spacing:-.035em;text-wrap:balance;text-shadow:0 2px 24px rgba(0,0,0,.55)}
 h1 span{color:#6FD3FF}
-.role{margin:0;color:var(--muted);font-size:16px;text-wrap:pretty;text-shadow:0 1px 12px rgba(0,0,0,.6)}
+.role{margin:0;color:var(--muted);font-size:15px;text-wrap:pretty;text-shadow:0 1px 12px rgba(0,0,0,.6)}
 .app{background:var(--glass);border:1px solid var(--line);border-radius:28px;padding:20px;display:flex;flex-direction:column;gap:16px;backdrop-filter:blur(16px) saturate(115%);-webkit-backdrop-filter:blur(16px) saturate(115%);box-shadow:0 20px 50px rgba(0,0,0,.35)}
 .top{display:flex;gap:16px;align-items:center}
 .icon{width:80px;height:80px;flex:none;border-radius:18px;display:block;box-shadow:0 8px 22px -8px rgba(0,0,0,.7),0 0 0 1px rgba(255,255,255,.12)}
@@ -43,6 +43,10 @@ h1 span{color:#6FD3FF}
 .staffly .primary{background:var(--staffly);color:#fff;box-shadow:0 8px 24px -8px rgba(20,165,166,.8)}
 .pulse .primary{background:var(--pulse);color:#fff;box-shadow:0 8px 24px -8px rgba(58,107,255,.8)}
 .secondary{background:rgba(255,255,255,.94);color:#061020}
+.qr{display:flex;gap:14px;align-items:center;padding-top:14px;border-top:1px solid var(--line)}
+.qr img{width:96px;height:96px;flex:none;border-radius:12px;background:#fff;padding:6px;display:block}
+.qr p{margin:0;font-size:13.5px;color:var(--muted);line-height:1.45}
+.qr strong{color:var(--ink);font-weight:600;font-size:14.5px}
 footer{text-align:center;color:var(--muted);font-size:13.5px;display:flex;flex-direction:column;gap:4px;padding-top:6px}
 footer strong{color:var(--ink);font-weight:600}
 @media (prefers-reduced-motion:no-preference){
@@ -70,11 +74,12 @@ footer strong{color:var(--ink);font-weight:600}
         <p class="kind">Staffing · Jobs</p>
       </div>
     </div>
-    <p class="blurb">Care providers post openings and find caregivers fast. Healthcare professionals browse jobs, build a profile and apply. In Amharic, Afaan Oromo, Tigrinya and English.</p>
     <div class="actions">
       <a class="btn primary" href="https://apps.apple.com/us/app/elstaffly-jobs/id6801220465"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.37 12.62c-.02-2.2 1.8-3.26 1.88-3.31-1.03-1.5-2.62-1.7-3.19-1.73-1.36-.14-2.65.8-3.34.8-.69 0-1.75-.78-2.88-.76-1.48.02-2.85.86-3.61 2.19-1.54 2.67-.39 6.62 1.11 8.79.73 1.06 1.6 2.25 2.74 2.21 1.1-.04 1.52-.71 2.85-.71s1.71.71 2.87.69c1.19-.02 1.94-1.08 2.66-2.15.84-1.23 1.19-2.42 1.21-2.48-.03-.01-2.32-.89-2.35-3.54zM14.18 6.15c.6-.73 1.01-1.75.9-2.76-.87.04-1.92.58-2.54 1.31-.56.64-1.05 1.68-.92 2.67.97.07 1.96-.49 2.56-1.22z"/></svg>Download on the App Store</a>
       <a class="btn secondary" href="https://elstaffly.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3z"/></svg><span>elstaffly.com</span></a>
     </div>
+  <p class="blurb">Care providers post openings and find caregivers fast. Healthcare professionals browse jobs, build a profile and apply. In Amharic, Afaan Oromo, Tigrinya and English.</p>
+    <div class="qr"><img src="data:image/png;base64,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" alt="QR code to download Elstaffly Jobs on the App Store" width="96" height="96"><p><strong>Scan to download</strong><br>Point an iPhone camera here to open Elstaffly Jobs on the App Store.</p></div>
   </section>
   <section class="app pulse" aria-labelledby="pulse-name">
     <div class="top">
@@ -84,11 +89,12 @@ footer strong{color:var(--ink);font-weight:600}
         <p class="kind">Care documentation</p>
       </div>
     </div>
-    <p class="blurb">MAR, flowsheets, progress notes, incident reports, scheduling and time clock for care homes, group homes, foster and treatment homes, all in one workspace on iPhone and iPad.</p>
     <div class="actions">
       <a class="btn primary" href="https://apps.apple.com/us/app/elpulsechart-mobile/id6811750889"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.37 12.62c-.02-2.2 1.8-3.26 1.88-3.31-1.03-1.5-2.62-1.7-3.19-1.73-1.36-.14-2.65.8-3.34.8-.69 0-1.75-.78-2.88-.76-1.48.02-2.85.86-3.61 2.19-1.54 2.67-.39 6.62 1.11 8.79.73 1.06 1.6 2.25 2.74 2.21 1.1-.04 1.52-.71 2.85-.71s1.71.71 2.87.69c1.19-.02 1.94-1.08 2.66-2.15.84-1.23 1.19-2.42 1.21-2.48-.03-.01-2.32-.89-2.35-3.54zM14.18 6.15c.6-.73 1.01-1.75.9-2.76-.87.04-1.92.58-2.54 1.31-.56.64-1.05 1.68-.92 2.67.97.07 1.96-.49 2.56-1.22z"/></svg>Download on the App Store</a>
       <a class="btn secondary" href="https://elpulsechart.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3z"/></svg><span>elpulsechart.com</span></a>
     </div>
+  <p class="blurb">MAR, flowsheets, progress notes, incident reports, scheduling and time clock for care homes, group homes, foster and treatment homes, all in one workspace on iPhone and iPad.</p>
+    <div class="qr"><img src="data:image/png;base64,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" alt="QR code to download ElPulseChart Mobile on the App Store" width="96" height="96"><p><strong>Scan to download</strong><br>Point an iPhone camera here to open ElPulseChart Mobile on the App Store.</p></div>
   </section>
 
   <footer>
@@ -122,7 +128,7 @@ footer strong{color:var(--ink);font-weight:600}
     var t=(now-t0)/1000;
     x.globalCompositeOperation='source-over';x.globalAlpha=1;x.fillStyle='#01040a';x.fillRect(0,0,W,H);
     // soft mist behind tree
-    var cx=W/2,f=Math.min(W*1.25,H*.62)/7.5,horizon=H*.42,camZ=17;
+    var cx=W/2,f=Math.min(W*1.2,H*.5)/7.5,horizon=H*.30,camZ=17;
     var mg=x.createRadialGradient(cx,horizon-3.4*f,0,cx,horizon-3.4*f,f*6);mg.addColorStop(0,'rgba(4,56,140,.32)');mg.addColorStop(1,'rgba(4,56,140,0)');x.fillStyle=mg;x.fillRect(0,0,W,H);
     x.globalCompositeOperation='lighter';
     // stars
