@@ -22,7 +22,8 @@ a{color:inherit;text-decoration:none}
   radial-gradient(80% 40% at 15% 70%,rgba(255,255,255,.18) 0%,rgba(255,255,255,0) 70%),
   radial-gradient(90% 45% at 90% 85%,rgba(120,220,255,.28) 0%,rgba(120,220,255,0) 70%),
   #0b8ed2}
-.hero-section__bg video{width:100%;height:100%;object-fit:cover;object-position:50% 0;display:block}
+.hero-section__bg{background:linear-gradient(180deg,#2f8ad2 0%,#4b9ddb 45%,#7cb9e6 75%,#a9d2f0 100%)!important}
+.hero-section__bg video{position:absolute;left:50%;top:0;width:auto;height:min(78svh,calc(100vw * 1.78 * .78));aspect-ratio:9/16;transform:translateX(-50%) translateY(-3%);object-fit:cover;display:block;-webkit-mask-image:linear-gradient(180deg,#000 0%,#000 55%,transparent 88%);mask-image:linear-gradient(180deg,#000 0%,#000 55%,transparent 88%)}
 .hero-section__bg::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(4,86,140,.22) 0%,rgba(4,86,140,0) 14%,rgba(4,86,140,0) 38%,rgba(5,90,145,.28) 58%,rgba(6,94,150,.5) 100%)}
 .stage{position:absolute;inset:0;z-index:1;display:flex;flex-direction:column;max-width:calc(560*var(--u));margin:0 auto;padding:max(calc(18*var(--u)),env(safe-area-inset-top)) calc(18*var(--u)) max(calc(16*var(--u)),env(safe-area-inset-bottom))}
 .vsp{flex-basis:0;min-height:calc(6*var(--u))} .vsp-a{flex-grow:1} .vsp-b{flex-grow:0}
@@ -89,7 +90,6 @@ h1{text-shadow:0 2px 18px rgba(3,50,90,.45);margin:calc(12*var(--u)) 0 calc(14*v
     </header>
     <span class="vsp vsp-a"></span>
     <section class="hero">
-      <div class="badge"><span class="chip">New</span><span class="btxt">Both apps are on the App Store</span></div>
       <h1><span class="ln"><span class="ln-i">Two apps for</span></span><span class="ln"><span class="ln-i">residential care</span></span></h1>
     </section>
     <span class="vsp vsp-b"></span>
