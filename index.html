@@ -136,11 +136,11 @@ footer strong{color:var(--ink);font-weight:600}
       var wind=Math.sin(t*.75+p.y*1.65+p.p)*.04*Math.max(0,p.y-2.5)/4;
       var X=(p.x+wind)*ca-p.z*sa,Z=(p.x+wind)*sa+p.z*ca,dz=camZ-Z,k2=13/dz;
       var sx=cx+X*f*k2,sy=horizon-(p.y-.6)*f*k2*.95,depth=(Z+3)/6,glow=.62+.38*Math.sin(p.p+t*1.4);
-      var rr=p.s*(small?2.6:3)*k2*(1.15-depth*.35);
-      x.globalAlpha=Math.min(1,glow*(.55+depth*.45));x.drawImage(depth>.5?near:far,sx-rr,sy-rr,rr*2,rr*2);
+      var rr=p.s*(small?3.6:3.8)*k2*(1.15-depth*.35);
+      x.globalAlpha=Math.min(1,glow*(.75+depth*.5));x.drawImage(depth>.5?near:far,sx-rr,sy-rr,rr*2,rr*2);
       // reflection
       var ry=wy+(wy-sy)*.62+Math.sin(t*1.4+p.y*6+p.x)*2;
-      if(ry<H){x.globalAlpha=glow*.16*Math.max(0,1-(p.y)/9);x.drawImage(far,sx-rr*1.1,ry-rr,rr*2.2,rr*2)}
+      if(ry<H){x.globalAlpha=glow*.26*Math.max(0,1-(p.y)/9);x.drawImage(far,sx-rr*1.1,ry-rr,rr*2.2,rr*2)}
     }
     x.globalAlpha=1;x.globalCompositeOperation='source-over';
     if(running&&!reduce)requestAnimationFrame(frame);
